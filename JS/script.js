@@ -11,11 +11,13 @@ const contador= document.getElementById('contador')
 const precioTotal= document.getElementById('precioTotal')
 
 //Array
-let carrito = [];
-console.log(carrito)
+/*let carrito = [];
+*/
 
 //LocalStorage
-/*let carrito =localStorage.getItem('carrito')??[]*/
+
+let carrito =localStorage.getItem('carrito')??[]
+console.log(carrito)
 
 //Funciones del carrito
 
@@ -76,7 +78,7 @@ const actualizar= ()=>{
             <button onclick="quitarCarrito(${producto.id})" class="botonQuitar btn btn-dark">Eliminar producto</button>
         `
         contenedorCarrito.appendChild(div)
-        localStorage.setItem('carrito',JSON.stringify('carrito'));
+        localStorage.setItem('carrito',JSON.stringify(carrito));
     })
     contador.innerText= carrito.length;
     precioTotal.innerText= carrito.reduce((acc,producto)=>acc+producto.precio*producto.cantidad,0)
