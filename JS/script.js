@@ -11,12 +11,18 @@ const contador= document.getElementById('contador')
 const precioTotal= document.getElementById('precioTotal')
 
 //Array
-/*let carrito = [];
-*/
+let carrito = [];
+
 
 //LocalStorage
-
-let carrito =localStorage.getItem('carrito')??[]
+/*let carrito =localStorage.getItem('carrito')? carrito=JSON.parse(localStorage.getItem('carrito')) : []*/
+/*let carrito =localStorage.getItem('carrito')??[]*/
+/*document.addEventListener('DOMContentLoaded', ()=>{
+    if(localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizar()
+    }
+})*/
 console.log(carrito)
 
 //Funciones del carrito
